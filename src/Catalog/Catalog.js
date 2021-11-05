@@ -1,19 +1,22 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { SnusList } from '../SnusList/SnusList';
+import {SearchOptionTop} from './SearchOptionTop/SearchOptionTop'
+import "./Catalog.css"
 
 export const Catalog = () => {
     return (
-        <div>
-            <Row>
-                <Col span={18} push={6}>
+        <>
+            <Row className='catalog-wrapper'>
+                <Col span={18} push={5}>
+                    <SearchOptionTop/>
                     <SnusList/>
                 </Col>
                 
-                <Col span={6} pull={18}>
+                <Col span={5} pull={18}>
                     параметры поиска
                 </Col>
             </Row>
-        </div>
+        </>
     )
 }
