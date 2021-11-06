@@ -24,7 +24,7 @@ export const SnusItem = () => {
                 <div class="snus-item__price">666 ₽</div>
                 <div class="snus-item__buy">
                     <div class="snus-item__buy-inner">
-                        <Button type="primary" shape='round'>
+                        <Button  type="default" shape='round'>
                             В корзину
                         </Button>
                     </div>
