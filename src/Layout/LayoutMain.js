@@ -37,7 +37,7 @@ export const LayoutMain = () => {
 
             </Header>
 
-            <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
+            <Content className="site-layout" style={{ padding: '0 50px', marginTop: 64, backgroundColor: "#fff" }}>
                 <Routes>
                     <Route path="/" element={<Welcome/>} />
                     <Route path="/home" element={<Home />} />
