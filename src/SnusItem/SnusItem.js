@@ -1,6 +1,5 @@
 import React from 'react'
 import './SnusItem.css'
-import { Image } from 'antd';
 import { Button } from 'antd';
 
 export const SnusItem = () => {
