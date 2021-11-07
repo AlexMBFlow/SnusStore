@@ -16,6 +16,7 @@
     transition: 1s;
     user-select: none;
 }
+
 .snus-avatar-img:hover {
     transform: scale(1.1);
 }
