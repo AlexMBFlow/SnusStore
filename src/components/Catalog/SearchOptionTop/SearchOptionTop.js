@@ -1,5 +1,5 @@
-import React from 'react'
-import './SearchOptionTop.css'
+import React from 'react';
+import './SearchOptionTop.css';
 
 
 export const SearchOptionTop = () => {

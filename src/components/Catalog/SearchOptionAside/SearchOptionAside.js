@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { PriceFilter } from './PriceFilter/PriceFilter';
-import { NicotineFilter } from './NicotineFilter/NicotineFilter'
+import { NicotineFilter } from './NicotineFilter/NicotineFilter';
 import { SearchSnus } from './SearchSnus/SearchSnus';
-import './SearchOptionAside.css'
+import './SearchOptionAside.css';
 
 
 export const SearchOptionAside = () => {

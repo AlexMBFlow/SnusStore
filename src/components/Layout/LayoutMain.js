@@ -1,7 +1,6 @@
 import React from "react";
 import { Layout, Menu } from 'antd';
 import { Route, Routes, Link } from 'react-router-dom';
-
 import { Welcome } from "../Welcume/Welcome.js";
 import { Home } from "../Home/Home.js";
 import { Catalog } from "../Catalog/Catalog.js";

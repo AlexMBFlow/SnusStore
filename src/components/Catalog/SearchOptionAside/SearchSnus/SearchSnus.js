@@ -18,10 +18,10 @@ const options = [
 export const SearchSnus = () => {
     return (
         <div className='search-snus aside-item'>
-            <div class="search-snus-wrap">
+            <div className="search-snus-wrap">
                 <Divider className="price-filter-options__price" orientation="left">ПОИСК</Divider>
             </div>
-            <div class="search-snus-input">
+            <div className="search-snus-input">
                 <AutoComplete
                     style={{
                         width: "100%",

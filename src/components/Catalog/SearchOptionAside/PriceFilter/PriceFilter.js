@@ -25,7 +25,7 @@ export const PriceFilter = () => {
                 </div>
             </div>
             <div className="price-filter-slider">
-                <span>Выберите отображаемый диапазон цены</span>
+                <span>Выберите желаемый диапазон цены</span>
                 <Slider range={{ draggableTrack: true }} min={100} max={650} defaultValue={[100, 650]} />
             </div>
         </div>
