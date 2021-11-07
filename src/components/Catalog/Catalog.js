@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { SnusList } from '../SnusList/SnusList';
-import {SearchOptionTop} from './SearchOptionTop/SearchOptionTop';
+import { SnusList } from './SnusList/SnusList';
+import { SearchOptionTop}  from './SearchOptionTop/SearchOptionTop';
 import { SearchOptionAside } from './SearchOptionAside/SearchOptionAside';
 import "./Catalog.css";
 

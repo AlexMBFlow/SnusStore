@@ -1,6 +1,6 @@
 import React from "react"
 import './App.css';
-import { LayoutMain } from "./Layout/LayoutMain";
+import { LayoutMain } from "./components/Layout/LayoutMain";
 
 function App() {
   return (
