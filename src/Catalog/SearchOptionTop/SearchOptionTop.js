@@ -1,9 +1,11 @@
 import React from 'react'
+import './SearchOptionTop.css'
+
 
 export const SearchOptionTop = () => {
     return (
-        <div>
-            СКОЛЬКО НА СТРАНИЦЕ, СОРТИРОВАТЬ ПО ЦЕНЕ
+        <div className='catalog-info'>
+            <span className='catalog-info-text'>Каталог снюса</span>
         </div>
     )
 }

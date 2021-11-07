@@ -1,7 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { SnusList } from '../SnusList/SnusList';
-import {SearchOptionTop} from './SearchOptionTop/SearchOptionTop'
+import {SearchOptionTop} from './SearchOptionTop/SearchOptionTop';
+import { SearchOptionAside } from './SearchOptionAside/SearchOptionAside';
 import "./Catalog.css"
 
 export const Catalog = () => {
@@ -14,7 +15,7 @@ export const Catalog = () => {
                 </Col>
                 
                 <Col span={5} pull={18}>
-                    параметры поиска
+                    <SearchOptionAside/>
                 </Col>
             </Row>
         </>

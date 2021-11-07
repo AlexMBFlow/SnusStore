@@ -5,6 +5,8 @@
   list-style: none;
   text-decoration: none;
   border: none;
-  outline: none;
+  outline: none;  
+}
+body {
   font-family: 'Open Sans', sans-serif;
 }
