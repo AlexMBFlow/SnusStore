@@ -8,7 +8,7 @@ import { Catalog } from "../Catalog/Catalog.js";
 import { Delivery } from "../Delivery/Delivery.js";
 import { Contacts } from "../Contacts/Contacts.js";
 import { FooterMain } from "../Footer/FooterMain.js";
-import './Layout.css'
+import './Layout.css';
 
 
 // [ANT DESIGN] <Menu defaultSelectedKeys={['1']}></Menu> отображение при загрузке сайта соответствующего менюИтема по key, пока убрал

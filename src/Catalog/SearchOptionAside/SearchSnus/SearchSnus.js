@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider } from "antd";
 import { AutoComplete } from 'antd';
-import './SearchSnus.css'
+import './SearchSnus.css';
 
 const options = [
     {

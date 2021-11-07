@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Checkbox, Divider } from "antd";
 import { Tooltip } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
-import './NicotineFilter.css'
+import './NicotineFilter.css';
 
 const CheckboxGroup = Checkbox.Group;
 

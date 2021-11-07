@@ -1,6 +1,6 @@
-import React from 'react'
-import { SnusItem } from '../SnusItem/SnusItem'
-import './SnusList.css'
+import React from 'react';
+import { SnusItem } from '../SnusItem/SnusItem';
+import './SnusList.css';
 
 export const SnusList = () => {
     return (
