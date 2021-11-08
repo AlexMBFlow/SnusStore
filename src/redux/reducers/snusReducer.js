@@ -1,6 +1,6 @@
-import { SnusStore } from "../snusStore/snusStore"
+import { snusStore } from "../snusStore/snusStore";
 
-const initialState = SnusStore
+const initialState = snusStore
 
 export const snusReducer = (state = initialState, action) => {
     switch(action.type) {

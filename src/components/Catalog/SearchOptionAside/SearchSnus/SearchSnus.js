@@ -1,21 +1,20 @@
 import React from 'react';
 import { Divider } from "antd";
 import { AutoComplete } from 'antd';
+import { useSelector } from "react-redux";
 import './SearchSnus.css';
 
 const options = [
-    {
-      value: 'Corvus',
-    },
-    {
-      value: 'RED',
-    },
-    {
-      value: 'Nictech',
-    },
+
   ];
 
 export const SearchSnus = () => {
+
+    const {snusItem} = useSelector(state => state.snusReducer); //заполняем строку автокомплита нужными названиями снюсов
+    snusItem.forEach( el => {
+        options.push({value: el.name})
+    } )
+
     return (
         <div className='search-snus aside-item'>
             <div className="search-snus-wrap">

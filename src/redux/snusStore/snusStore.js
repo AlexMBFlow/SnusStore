@@ -1,4 +1,4 @@
-export const SnusStore = {
+export const snusStore = {
     snusItem: [
         {
             name: "Corvus",
@@ -41,7 +41,7 @@ export const SnusStore = {
             avatar: 'https://snus-uupx.ru/assets/images/products/620/small/red-banan.jpg'
         },
         {
-            name: "Deluxe",
+            name: "Nictech",
             taste: "Кокос",
             packs: 20,
             nicotine: 70,
