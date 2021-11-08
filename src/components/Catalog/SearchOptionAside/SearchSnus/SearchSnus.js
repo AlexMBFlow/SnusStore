@@ -14,23 +14,16 @@ export const SearchSnus = () => {
     const { snusItems } = useSelector(state => state.snusReducer); //заполняем строку автокомплита нужными названиями снюсов
 
     let duplicateArr = [];
-    let duplicateArr2 = [];
 
     snusItems.forEach( el => duplicateArr.push(el.name))
 
-    for (let v of duplicateArr) {
-        duplicateArr2.push(v)
-    }
-
     if (options.length < 1) {
-        let soloItems = new Set(duplicateArr2)
+        let soloItems = new Set(duplicateArr)
     
         for (let value of soloItems) {
             options.push({value: value, key: uuidv4()})
         }
     }
-
-
 
     return (
         <div className='search-snus aside-item'>
