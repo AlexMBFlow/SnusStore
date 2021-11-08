@@ -1,5 +1,21 @@
 export const snusStore = {
-    snusItem: [
+    snusItems: [
+        {
+            name: "Nictech",
+            taste: "Арбуз",
+            packs: 20,
+            nicotine: 70,
+            price: 420,
+            avatar: 'https://snus-uupx.ru/assets/images/products/620/small/red-banan.jpg'
+        },
+        {
+            name: "Nictech",
+            taste: "Арбуз",
+            packs: 20,
+            nicotine: 70,
+            price: 420,
+            avatar: 'https://snus-uupx.ru/assets/images/products/620/small/red-banan.jpg'
+        },
         {
             name: "Corvus",
             taste: "Клубника",
@@ -17,7 +33,7 @@ export const snusStore = {
             avatar: 'https://snus-uupx.ru/assets/images/products/620/small/red-banan.jpg'
         },
         {
-            name: "Oddens",
+            name: "Odens",
             taste: "Черника",
             packs: 20,
             nicotine: 50,
@@ -43,6 +59,29 @@ export const snusStore = {
         {
             name: "Nictech",
             taste: "Кокос",
+            packs: 20,
+            nicotine: 70,
+            price: 420,
+            avatar: 'https://snus-uupx.ru/assets/images/products/620/small/red-banan.jpg'
+        },
+        {
+            name: "Nictech",
+            taste: "Арбуз",
+            packs: 20,
+            nicotine: 70,
+            price: 420,
+            avatar: 'https://snus-uupx.ru/assets/images/products/620/small/red-banan.jpg'
+        },
+        {
+            name: "Nictech",
+            taste: "Арбуз",
+            packs: 20,
+            nicotine: 70,
+            price: 420,
+            avatar: 'https://snus-uupx.ru/assets/images/products/620/small/red-banan.jpg'
+        },        {
+            name: "Nictech",
+            taste: "Арбуз",
             packs: 20,
             nicotine: 70,
             price: 420,

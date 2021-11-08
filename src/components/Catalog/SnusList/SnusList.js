@@ -6,13 +6,13 @@ import './SnusList.css';
 export const SnusList = () => {
     let counter = 0;
     //const dispatch = useDispatch();
-    const {snusItem} = useSelector(state => state.snusReducer);
+    const {snusItems} = useSelector(state => state.snusReducer);
 
     //console.log(snusItem)
     return (
         <div className='snus-list'>
 
-            {snusItem.map(snus => (
+            {snusItems.map(snus => (
                 
             <SnusItem snusInfo={snus} key={counter++}/>
 

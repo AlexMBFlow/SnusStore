@@ -2,16 +2,35 @@ import React from 'react';
 import { Divider } from "antd";
 import { AutoComplete } from 'antd';
 import { useSelector } from "react-redux";
+import { v4 as uuidv4 } from 'uuid';
 import './SearchSnus.css';
 
 const options = [];
 
-export const SearchSnus = () => {
 
-    const {snusItem} = useSelector(state => state.snusReducer); //заполняем строку автокомплита нужными названиями снюсов
-    snusItem.forEach( el => {
-        options.push({value: el.name})
-    } )
+
+
+export const SearchSnus = () => {
+    const { snusItems } = useSelector(state => state.snusReducer); //заполняем строку автокомплита нужными названиями снюсов
+
+    let duplicateArr = [];
+    let duplicateArr2 = [];
+
+    snusItems.forEach( el => duplicateArr.push(el.name))
+
+    for (let v of duplicateArr) {
+        duplicateArr2.push(v)
+    }
+
+    if (options.length < 1) {
+        let soloItems = new Set(duplicateArr2)
+    
+        for (let value of soloItems) {
+            options.push({value: value, key: uuidv4()})
+        }
+    }
+
+
 
     return (
         <div className='search-snus aside-item'>
