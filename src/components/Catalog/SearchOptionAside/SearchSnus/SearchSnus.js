@@ -4,9 +4,7 @@ import { AutoComplete } from 'antd';
 import { useSelector } from "react-redux";
 import './SearchSnus.css';
 
-const options = [
-
-  ];
+const options = [];
 
 export const SearchSnus = () => {
 
