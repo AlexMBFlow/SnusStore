@@ -17,7 +17,7 @@ export const SnusList = ({ snusItems, value }) => {
             return true
         }
     })
-
+    
     return (
         <div className='snus-list'>
 
