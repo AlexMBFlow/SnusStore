@@ -1,33 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Checkbox, Divider } from "antd";
 import { Tooltip } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import './NicotineFilter.css';
 
-
 const CheckboxGroup = Checkbox.Group;
 
-const plainOptions = ["Легкий", "Средний", "Крепкий", "Очень крепкий"];
-const defaultCheckedList = ["Средний", "Крепкий", "Очень крепкий"];
-
-
-export const NicotineFilter = () => {
-    const tooltipText = '0-20мг легкий, 20-40мг средний, 40-60мг крепкий, 60+мг очень крепкий';
-    const [checkedList, setCheckedList] = useState(defaultCheckedList);
-    const [indeterminate, setIndeterminate] = useState(true);
-    const [checkAll, setCheckAll] = useState(false);
-    
-    const onChange = (list) => {
-        setCheckedList(list);
-        setIndeterminate(!!list.length && list.length < plainOptions.length);
-        setCheckAll(list.length === plainOptions.length);
-    };
-
-    const onCheckAllChange = (e) => {
-        setCheckedList(e.target.checked ? plainOptions : []);
-        setIndeterminate(false);
-        setCheckAll(e.target.checked);
-    };
+export const NicotineFilter = ({onChangeNicotineFilter,onCheckAllChangeNicotineFilter,
+    plainOptions, tooltipText, checkedList,
+    indeterminate, checkAll}) => {
     
     return (
         <div className='nicotine-filter aside-item'>
@@ -37,12 +18,12 @@ export const NicotineFilter = () => {
                     <CheckboxGroup style={{ flex: '0 1 auto' }}
                         options={plainOptions}
                         value={checkedList}
-                        onChange={onChange}
+                        onChange={onChangeNicotineFilter}
                     />
                 </div>
                 <Checkbox
                     indeterminate={indeterminate}
-                    onChange={onCheckAllChange}
+                    onChange={onCheckAllChangeNicotineFilter}
                     checked={checkAll}
                     style={{ paddingTop: "0.7rem" }}>
 
