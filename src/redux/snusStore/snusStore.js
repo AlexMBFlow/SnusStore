@@ -79,7 +79,16 @@ export const snusStore = {
             nicotine: 70,
             price: 420,
             avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
-        },        {
+        },
+        {
+            name: "Nictech",
+            taste: "Арбуз",
+            packs: 20,
+            nicotine: 70,
+            price: 420,
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
+        },
+        {
             name: "Nictech",
             taste: "Арбуз",
             packs: 20,

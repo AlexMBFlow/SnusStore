@@ -7,12 +7,12 @@ export const SnusList = ({ snusItems, value }) => {
     /* 
     Из стора приходит весь снюсик {snusItems}, и значение из инпута {value},
     на каждый ончейндж инпута используется редусер и изменяется стейт редюсера
-    регулярка {regexp} проверяет совпадение {.test} то что написали в инпут со всем имеющимся снюсом {snus.name)}
+    регулярка {regexp} проверяет совпадение {.test} то что написали в инпут со всем имеющимся снюсом {snus.name} || {snus.taste}
     */
     let regexp = new RegExp(value,"gi")
     const snus = snusItems.filter(snus => {
-        if ( value && value.length > 2) {
-            return regexp.test(snus.name)
+        if ( value && value.length > 0) {
+            return regexp.test(snus.name) || regexp.test(snus.taste)
         } else {
             return true
         }

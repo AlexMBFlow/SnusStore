@@ -15,10 +15,9 @@ export const NicotineFilter = () => {
     const tooltipText = '0-20мг легкий, 20-40мг средний, 40-60мг крепкий, 60+мг очень крепкий';
     const [checkedList, setCheckedList] = useState(defaultCheckedList);
     const [indeterminate, setIndeterminate] = useState(true);
-    const [checkAll, setCheckAll] = useState(true);
-
+    const [checkAll, setCheckAll] = useState(false);
+    
     const onChange = (list) => {
-        console.log(list)
         setCheckedList(list);
         setIndeterminate(!!list.length && list.length < plainOptions.length);
         setCheckAll(list.length === plainOptions.length);
