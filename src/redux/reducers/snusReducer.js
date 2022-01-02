@@ -12,3 +12,5 @@ export const snusReducer = (state = initialState, action) => {
             return state
     }
 }
+
+//P.S. на данный момент этот редюсер бесполезен, он ничего не делает
