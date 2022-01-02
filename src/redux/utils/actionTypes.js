@@ -1,0 +1,1 @@
+export const SEARCH_SNUS_INPUT = "SEARCH_SNUS_INPUT"

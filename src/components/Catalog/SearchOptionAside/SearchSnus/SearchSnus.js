@@ -1,28 +1,28 @@
 import React from 'react';
 import { Divider } from "antd";
 import { AutoComplete } from 'antd';
-import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from 'uuid';
 import './SearchSnus.css';
+import { useDispatch } from 'react-redux';
 
 const options = [];
 
-
-
-
-export const SearchSnus = () => {
-    const { snusItems } = useSelector(state => state.snusReducer); //заполняем строку автокомплита нужными названиями снюсов
-
+export const SearchSnus = ({snusItems, value}) => {
+    const dispatch = useDispatch()
+    const handleChange = e => {
+        console.log(e)
+        dispatch({type: "SEARCH_SNUS_INPUT", payload: e})
+    }
+    //заполняем строку автокомплита нужными названиями снюсов
     let duplicateArr = [];
 
     snusItems.forEach( el => duplicateArr.push(el.name))
 
     if (options.length < 1) {
         let soloItems = new Set(duplicateArr)
-    
-        for (let value of soloItems) {
+        soloItems.forEach( value => {
             options.push({value: value, key: uuidv4()})
-        }
+        })
     }
 
     return (
@@ -40,6 +40,8 @@ export const SearchSnus = () => {
                     filterOption={(inputValue, option) =>
                         option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
                     }
+                    onChange={handleChange}
+                    value={value}
                 />
             </div>
         </div>

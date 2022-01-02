@@ -1,20 +1,29 @@
 import React from 'react';
 import { SnusItem } from './SnusItem/SnusItem';
-import { useSelector } from "react-redux";
+import { v4 as uuidv4 } from 'uuid';
 import './SnusList.css';
 
-export const SnusList = () => {
-    let counter = 0;
-    //const dispatch = useDispatch();
-    const {snusItems} = useSelector(state => state.snusReducer);
+export const SnusList = ({ snusItems, value }) => {
+    /* 
+    Из стора приходит весь снюсик, и значение из инпута,
+    на каждый ончейндж инпута используется редусер и изменяется стейт редюсера
+    регулярка проверяет совпадение то что написали в инпут со всеи имеющимся снюсом  
+    */
+    let regexp = new RegExp(value,"gi")
+    const snus = snusItems.filter(snus => {
+        if ( value && value.length > 2) {
+            return regexp.test(snus.name)
+        } else {
+            return true
+        }
+    })
 
-    //console.log(snusItem)
     return (
         <div className='snus-list'>
 
-            {snusItems.map(snus => (
-                
-            <SnusItem snusInfo={snus} key={counter++}/>
+            {snus.map(snus => (
+
+                <SnusItem snusProps={snus} key={uuidv4()} />
 
             ))}
 

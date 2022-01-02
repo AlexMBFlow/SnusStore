@@ -5,10 +5,10 @@ import { SearchSnus } from './SearchSnus/SearchSnus';
 import './SearchOptionAside.css';
 
 
-export const SearchOptionAside = () => {
+export const SearchOptionAside = ({snusItems, value}) => {
     return (
         <div className='search-options-aside'>
-            <SearchSnus/>
+            <SearchSnus value={value} snusItems={snusItems}/>
             <PriceFilter/>
             <NicotineFilter/>
         </div>
