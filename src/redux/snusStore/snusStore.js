@@ -7,9 +7,7 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id: 1
-
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
         },
         {
             name: "Nictech",
@@ -18,8 +16,7 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id: 2
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
         },
         {
             name: "Corvus",
@@ -28,8 +25,7 @@ export const snusStore = {
             nicotine: 25,
             saturation: "Средний",
             price: 450,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id: 3
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
         },
         {
             name: "RED",
@@ -38,8 +34,7 @@ export const snusStore = {
             nicotine: 50,
             saturation: "Крепкий",
             price: 500,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id: 4
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
         },
         {
             name: "Odens",
@@ -48,8 +43,7 @@ export const snusStore = {
             nicotine: 50,
             saturation: "Крепкий",
             price: 500,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id: 5
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
         },
         {
             name: "Alfa",
@@ -58,8 +52,7 @@ export const snusStore = {
             nicotine: 50,
             saturation: "Крепкий",
             price: 400,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id: 6
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
         },
         {
             name: "Deluxe",
@@ -68,18 +61,7 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id: 7
-        },
-        {
-            name: "Deluxe",
-            taste: "Кокос",
-            packs: 20,
-            nicotine: 70,
-            saturation: "Очень крепкий",
-            price: 420,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id: 8
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
         },
         {
             name: "Nictech",
@@ -88,8 +70,7 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id: 9
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
         },
         {
             name: "Nictech",
@@ -98,8 +79,7 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id: 10
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
         },
         {
             name: "Nictech",
@@ -108,28 +88,15 @@ export const snusStore = {
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id:11
-        },
-        {
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
+        },        {
             name: "Nictech",
             taste: "Арбуз",
             packs: 20,
             nicotine: 70,
             saturation: "Очень крепкий",
             price: 420,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id:12
-        },
-        {
-            name: "Nictech",
-            taste: "Арбуз",
-            packs: 20,
-            nicotine: 70,
-            saturation: "Очень репкий",
-            price: 420,
-            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
-            id:13
+            avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
         }
     ]
 }

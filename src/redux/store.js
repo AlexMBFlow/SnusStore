@@ -4,14 +4,13 @@ import {testReducer2} from './reducers/testReducer2'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { snusReducer } from "./reducers/snusReducer"
 import { inputReducer } from "../redux/reducers/inputReducer"
-import { setInitialNicotineReducer } from "../redux/reducers/setInitialNicotineReducer"
+import { nicotineReducer } from "../redux/reducers/nicotineReducer"
 const rootReduser = combineReducers({
     testReducer,
     testReducer2,
     snusReducer,
     inputReducer,
-    setInitialNicotineReducer
-    //setSearchReducer
+    nicotineReducer
 })
 
 export const store = createStore(rootReduser, composeWithDevTools() )
