@@ -3,21 +3,31 @@ import { Checkbox, Divider } from "antd";
 import { Tooltip } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import './NicotineFilter.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { checkedListAC } from "../../../../redux/actionCreators/checkedListAC"
 
 const CheckboxGroup = Checkbox.Group;
 
 const plainOptions = ["Легкий", "Средний", "Крепкий", "Очень крепкий"];
-const defaultCheckedList = ["Средний", "Крепкий"];
+const defaultCheckedList = ["Средний", "Крепкий", "Очень крепкий"];
 
 
 export const NicotineFilter = () => {
+    const dispatch = useDispatch()
     const tooltipText = '0-20мг легкий, 20-40мг средний, 40-60мг крепкий, 60+мг очень крепкий';
-    const [checkedList, setCheckedList] = useState(defaultCheckedList);
-    const [indeterminate, setIndeterminate] = useState(true);
-    const [checkAll, setCheckAll] = useState(false);
 
+    const {checkedList} = useSelector(state => state.nicotineReducer)
+    //debugger
+    const {indeterminate} = useSelector(state => state.nicotineReducer)
+    const {checkAll} = useSelector(state => state.nicotineReducer)
+
+    const [checkedList1, setCheckedList] = useState(defaultCheckedList);
+    const [indeterminate1, setIndeterminate] = useState(true);
+    const [checkAll1, setCheckAll] = useState(false);
+    //debugger
     const onChange = (list) => {
-        setCheckedList(list);
+        //setCheckedList(list);
+        dispatch(checkedListAC(list))
         setIndeterminate(!!list.length && list.length < plainOptions.length);
         setCheckAll(list.length === plainOptions.length);
     };

@@ -11,7 +11,7 @@ export const SnusList = ({ snusItems, value }) => {
     */
     let regexp = new RegExp(value,"gi")
     const snus = snusItems.filter(snus => {
-        if ( value && value.length > 2) {
+        if ( value && value.length > 0) {
             return regexp.test(snus.name)
         } else {
             return true
