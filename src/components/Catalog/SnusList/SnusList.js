@@ -14,6 +14,7 @@ export const SnusList = ({ snusItems, value, checkedList}) => {
     регулярка {regexp} проверяет совпадение {.test} то что написали в инпут со всем имеющимся снюсом {snus.name} || {snus.taste}
     */
    
+   
     //!!!TODO: переделать стейт менеджемент и запихнуть в редакс useState'ы из ант дизайна в редакс, т.е. пихнуть никотин фильтр в редакс
     let nicotineFilterArray = [];
     let bothArray = [];
