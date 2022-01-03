@@ -13,4 +13,4 @@ export const nicotineReducer = (state = initialState, action) => {
         default:
             return state
     }
-} 
+}
