@@ -1,22 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Checkbox, Divider } from "antd";
 import { Tooltip } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import './NicotineFilter.css';
 import { useSelector, useDispatch } from 'react-redux';
+import { checkedListAC } from "../../../../redux/actionCreators/checkedListAC"
+
 const CheckboxGroup = Checkbox.Group;
 
-export const NicotineFilter = ({ onChangeNicotineFilter, onCheckAllChangeNicotineFilter,
-    plainOptions, tooltipText, checkedList,
-    indeterminate, checkAll }) => {
-
-    const { checkAll: checkAll2, indeterminate: indeterminate2, checkedList: checkedList2 } = useSelector(state => state.setInitialNicotineReducer)
+const plainOptions = ["Легкий", "Средний", "Крепкий", "Очень крепкий"];
+const defaultCheckedList = ["Средний", "Крепкий", "Очень крепкий"];
 
 
+export const NicotineFilter = () => {
+    const dispatch = useDispatch()
+    const tooltipText = '0-20мг легкий, 20-40мг средний, 40-60мг крепкий, 60+мг очень крепкий';
 
-    const onChange = (event) => {
-        
-    }
+    const {checkedList} = useSelector(state => state.nicotineReducer)
+    //debugger
+    const {indeterminate} = useSelector(state => state.nicotineReducer)
+    const {checkAll} = useSelector(state => state.nicotineReducer)
+
+    const [checkedList1, setCheckedList] = useState(defaultCheckedList);
+    const [indeterminate1, setIndeterminate] = useState(true);
+    const [checkAll1, setCheckAll] = useState(false);
+    //debugger
+    const onChange = (list) => {
+        //setCheckedList(list);
+        dispatch(checkedListAC(list))
+        setIndeterminate(!!list.length && list.length < plainOptions.length);
+        setCheckAll(list.length === plainOptions.length);
+    };
+
+    const onCheckAllChange = (e) => {
+        setCheckedList(e.target.checked ? plainOptions : []);
+        setIndeterminate(false);
+        setCheckAll(e.target.checked);
+    };
 
     return (
         <div className='nicotine-filter aside-item'>
@@ -31,7 +51,7 @@ export const NicotineFilter = ({ onChangeNicotineFilter, onCheckAllChangeNicotin
                 </div>
                 <Checkbox
                     indeterminate={indeterminate}
-                    onChange={onCheckAllChangeNicotineFilter}
+                    onChange={onCheckAllChange}
                     checked={checkAll}
                     style={{ paddingTop: "0.7rem" }}>
 
