@@ -7,11 +7,17 @@ import { Catalog } from "../Catalog/Catalog.js";
 import { Delivery } from "../Delivery/Delivery.js";
 import { Contacts } from "../Contacts/Contacts.js";
 import { FooterMain } from "../Footer/FooterMain.js";
+
+import { useDispatch, useSelector } from 'react-redux';
+
 import './Layout.css';
 
 // [ANT DESIGN] <Menu defaultSelectedKeys={['1']}></Menu> отображение при загрузке сайта соответствующего менюИтема по key, пока убрал
 
 export const LayoutMain = () => {
+    const {checkAll: checkAll2, indeterminate: indeterminate2, checkedList: checkedList2} = useSelector(state => state.setInitialNicotineReducer)
+    console.log(indeterminate2)
+    const dispatch = useDispatch()
     //NicotineFilter, TODO: добавить эти стейты в редакс, т.е. избавиться от useState()
     const plainOptions = ["Легкий", "Средний", "Крепкий", "Очень крепкий"];
     const defaultCheckedList = ["Средний", "Крепкий", "Очень крепкий"];    

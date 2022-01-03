@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { SnusItem } from './SnusItem/SnusItem';
 import { v4 as uuidv4 } from 'uuid';
+import { useDispatch, useSelector } from 'react-redux';
+import { snusSearchAC } from "../../../redux/actionCreators/setSearchReducerActionCreator"
 import './SnusList.css';
 
 export const SnusList = ({ snusItems, value, checkedList}) => {
+    const dispatch = useDispatch()
+    
+
     /* 
     Из стора приходит весь снюсик {snusItems}, и значение из инпута {value},
     на каждый ончейндж инпута используется редусер и изменяется стейт редюсера
@@ -27,7 +32,7 @@ export const SnusList = ({ snusItems, value, checkedList}) => {
                 nicotineFilterArray.push(snus)
             }      
         })
-    })
+    }) 
 
     inputSearchSnus.forEach(el => {
         nicotineFilterArray.forEach(d => {
@@ -37,6 +42,9 @@ export const SnusList = ({ snusItems, value, checkedList}) => {
         })
     })
 
+    useEffect(() => {
+        
+    })
     return (
         <div className='snus-list'>
 

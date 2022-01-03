@@ -96,7 +96,7 @@ export const snusStore = {
             taste: "Арбуз",
             packs: 20,
             nicotine: 70,
-            saturation: "Крепкий",
+            saturation: "Очень крепкий",
             price: 420,
             avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
             id: 10
@@ -106,7 +106,7 @@ export const snusStore = {
             taste: "Брусника",
             packs: 20,
             nicotine: 70,
-            saturation: "Крепкий",
+            saturation: "Очень крепкий",
             price: 420,
             avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
             id:11
@@ -116,7 +116,7 @@ export const snusStore = {
             taste: "Арбуз",
             packs: 20,
             nicotine: 70,
-            saturation: "Крепкий",
+            saturation: "Очень крепкий",
             price: 420,
             avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
             id:12
@@ -126,7 +126,7 @@ export const snusStore = {
             taste: "Арбуз",
             packs: 20,
             nicotine: 70,
-            saturation: "Крепкий",
+            saturation: "Очень репкий",
             price: 420,
             avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg',
             id:13
