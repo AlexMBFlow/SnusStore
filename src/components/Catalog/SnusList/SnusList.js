@@ -8,13 +8,13 @@ import './SnusList.css';
 export const SnusList = ({ snusItems, value, checkedList}) => {
     const dispatch = useDispatch()
     
-
     /* 
     Из стора приходит весь снюсик {snusItems}, и значение из инпута {value},
     на каждый ончейндж инпута используется редусер и изменяется стейт редюсера
     регулярка {regexp} проверяет совпадение {.test} то что написали в инпут со всем имеющимся снюсом {snus.name} || {snus.taste}
     */
-   //!!!TODO: переделать стейт менеджемент и запихнуть в редакс useState'ы из ант дизайна в редакс, т.е. пихнуть никотин фильтр в редакс
+   
+    //!!!TODO: переделать стейт менеджемент и запихнуть в редакс useState'ы из ант дизайна в редакс, т.е. пихнуть никотин фильтр в редакс
     let nicotineFilterArray = [];
     let bothArray = [];
     const regexp = new RegExp(value,"gi")
