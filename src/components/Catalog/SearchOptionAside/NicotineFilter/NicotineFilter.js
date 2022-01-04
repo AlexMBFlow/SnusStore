@@ -5,6 +5,7 @@ import { QuestionCircleOutlined } from '@ant-design/icons';
 import './NicotineFilter.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { checkedListAC } from "../../../../redux/actionCreators/checkedListAC"
+import { setIndeterminateAC } from "../../../../redux/actionCreators/setIndeterminateAC"
 
 const CheckboxGroup = Checkbox.Group;
 
@@ -28,8 +29,10 @@ export const NicotineFilter = () => {
     const onChange = (list) => {
         //setCheckedList(list);
         dispatch(checkedListAC(list))
-        setIndeterminate(!!list.length && list.length < plainOptions.length);
-        setCheckAll(list.length === plainOptions.length);
+        dispatch(setIndeterminateAC(!!list.length && list.length < plainOptions.length))
+        
+        //setIndeterminate(!!list.length && list.length < plainOptions.length);
+        //setCheckAll(list.length === plainOptions.length);
     };
 
     const onCheckAllChange = (e) => {
@@ -50,9 +53,9 @@ export const NicotineFilter = () => {
                     />
                 </div>
                 <Checkbox
-                    indeterminate={indeterminate}
+                    indeterminate={indeterminate} //false
                     onChange={onCheckAllChange}
-                    checked={checkAll}
+                    checked={checkAll} // true , только тогда будет галочка
                     style={{ paddingTop: "0.7rem" }}>
 
                     <span>Выбрать всё</span>
