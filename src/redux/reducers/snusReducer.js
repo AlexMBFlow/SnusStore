@@ -6,8 +6,8 @@ export const snusReducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD":
             return { ...state, value: state.value + action.value }
-        case "SNUS_SEARCH":
-            return { ...state, }
+        case "SNUS_SEARCH_TEST":
+            return { ...state}
         default:
             return state
     }
