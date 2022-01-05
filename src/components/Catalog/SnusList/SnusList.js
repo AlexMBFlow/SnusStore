@@ -20,13 +20,9 @@ export const SnusList = ({ snusItems, value }) => {
 
     return (
         <div className='snus-list'>
-
             {snus.map(snus => (
-
                 <SnusItem snusProps={snus} key={uuidv4()} />
-
             ))}
-
         </div>
     )
 }

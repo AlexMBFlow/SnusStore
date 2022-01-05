@@ -4,14 +4,14 @@ import { AutoComplete } from 'antd';
 import { v4 as uuidv4 } from 'uuid';
 import './SearchSnus.css';
 import { useDispatch } from 'react-redux';
-import { inputReducerAC } from "../../../../redux/actionCreators/inputReducerAC"
+import { inputAC } from "../../../../redux/actionCreators/inputAC"
 
 const options = [];
 
 export const SearchSnus = ({snusItems, value}) => {
     const dispatch = useDispatch()
     const handleChange = e => {
-        dispatch(inputReducerAC(e))
+        dispatch(inputAC(e))
     }
     //заполняем строку автокомплита нужными названиями снюсов
     let duplicateArr = [];

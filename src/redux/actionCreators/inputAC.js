@@ -1,7 +1,8 @@
 import { SEARCH_SNUS_INPUT }from "../utils/actionTypes"
-export const inputReducerAC = (payload) => {
+
+export const inputAC = (value) => {
     return {
         type: SEARCH_SNUS_INPUT,
-        payload: payload
+        value: value
     }
 }
