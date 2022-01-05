@@ -3,7 +3,7 @@ import { SET_SORT_PRICE_SELECT } from "../utils/actionTypes";
 
 const initialState = {
     defaultPrice: [100, 650],
-    selectedPrice: [],
+    selectedPrice: [100, 650],
     min: 100,
     max: 650,
     sort: null
