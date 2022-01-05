@@ -3,12 +3,11 @@ import { Select } from 'antd';
 import { Slider } from 'antd';
 import { Divider } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
-import { priceAC } from "../../../../redux/actionCreators/priceAC";
+import { priceSliderAC } from "../../../../redux/actionCreators/priceSliderAC";
+import { setSortPriceAC } from "../../../../redux/actionCreators/setSortPriceAC";
 import './PriceFilter.css';
 
-function handleChangeSelect(value) {
-    console.log(value);
-}
+
 
 export const PriceFilter = () => {
     const dispatch = useDispatch()
@@ -16,12 +15,18 @@ export const PriceFilter = () => {
     const {defaultPrice} = useSelector(state => state.priceReducer)
     const {min} = useSelector(state => state.priceReducer)
     const {max} = useSelector(state => state.priceReducer)
+    //const {sort} = useSelector(state => state.priceReducer) priceReducer-->state.sort
+
+    const handleChangeSelect = sort => {
+        dispatch(setSortPriceAC(sort))
+    }
 
     const handleChangeSlider = value => {
-        dispatch(priceAC(value))
+        dispatch(priceSliderAC(value))
     }
 
     const { Option, OptGroup } = Select;
+
     return (
         <div className='price-filter aside-item'>
             <div className="price-filter-options">
