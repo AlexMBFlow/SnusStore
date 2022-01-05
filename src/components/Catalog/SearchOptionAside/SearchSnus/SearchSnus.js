@@ -3,12 +3,14 @@ import { Divider } from "antd";
 import { AutoComplete } from 'antd';
 import { v4 as uuidv4 } from 'uuid';
 import './SearchSnus.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { inputAC } from "../../../../redux/actionCreators/inputAC"
 
 const options = [];
 
-export const SearchSnus = ({snusItems, value}) => {
+export const SearchSnus = () => {
+    const {value} = useSelector(state => state.inputReducer)
+    const {snusItems} = useSelector(state => state.snusReducer)
     const dispatch = useDispatch()
     const handleChange = e => {
         dispatch(inputAC(e))
