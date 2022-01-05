@@ -12,4 +12,4 @@ const rootReduser = combineReducers({
     priceReducer
 })
 
-export const store = createStore(rootReduser, composeWithDevTools() )
+export const store = createStore(rootReduser, composeWithDevTools())

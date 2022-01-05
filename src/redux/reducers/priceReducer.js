@@ -1,4 +1,4 @@
-import { SET_SELECTED_PRICE_SLIDER } from "../utils/actionTypes"
+import { SET_SELECTED_PRICE_SLIDER } from "../utils/actionTypes";
 import { SET_SORT_PRICE_SELECT } from "../utils/actionTypes";
 
 const initialState = {

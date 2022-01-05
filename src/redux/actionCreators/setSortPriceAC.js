@@ -1,4 +1,4 @@
-import { SET_SORT_PRICE_SELECT }from "../utils/actionTypes"
+import { SET_SORT_PRICE_SELECT }from "../utils/actionTypes";
 
 export const setSortPriceAC = (sort) => {
     return {
