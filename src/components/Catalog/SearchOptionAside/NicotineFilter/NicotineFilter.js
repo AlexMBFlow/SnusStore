@@ -1,44 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Checkbox, Divider } from "antd";
 import { Tooltip } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import './NicotineFilter.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { checkedListAC } from "../../../../redux/actionCreators/checkedListAC"
-import { setIndeterminateAC } from "../../../../redux/actionCreators/setIndeterminateAC"
+import { checkedListAC } from "../../../../redux/actionCreators/checkedListAC";
+import { setIndeterminateAC } from "../../../../redux/actionCreators/setIndeterminateAC";
+import { setCheckAllAC } from "../../../../redux/actionCreators/setCheckAllAC";
 
 const CheckboxGroup = Checkbox.Group;
-
-const plainOptions = ["Легкий", "Средний", "Крепкий", "Очень крепкий"];
-const defaultCheckedList = ["Средний", "Крепкий", "Очень крепкий"];
-
 
 export const NicotineFilter = () => {
     const dispatch = useDispatch()
     const tooltipText = '0-20мг легкий, 20-40мг средний, 40-60мг крепкий, 60+мг очень крепкий';
 
-    const {checkedList} = useSelector(state => state.nicotineReducer)
-    //debugger
+    const {defaultCheckedList} = useSelector(state => state.nicotineReducer)
+    const {plainOptions} = useSelector(state => state.nicotineReducer)
     const {indeterminate} = useSelector(state => state.nicotineReducer)
     const {checkAll} = useSelector(state => state.nicotineReducer)
 
-    const [checkedList1, setCheckedList] = useState(defaultCheckedList);
-    const [indeterminate1, setIndeterminate] = useState(true);
-    const [checkAll1, setCheckAll] = useState(false);
-    //debugger
     const onChange = (list) => {
-        //setCheckedList(list);
         dispatch(checkedListAC(list))
         dispatch(setIndeterminateAC(!!list.length && list.length < plainOptions.length))
-        
-        //setIndeterminate(!!list.length && list.length < plainOptions.length);
-        //setCheckAll(list.length === plainOptions.length);
+        dispatch(setCheckAllAC(list.length === plainOptions.length))
     };
 
     const onCheckAllChange = (e) => {
-        setCheckedList(e.target.checked ? plainOptions : []);
-        setIndeterminate(false);
-        setCheckAll(e.target.checked);
+        dispatch(checkedListAC(e.target.checked ? plainOptions : []))
+        dispatch(setIndeterminateAC(false));
+        dispatch(setCheckAllAC(e.target.checked))
     };
 
     return (
@@ -48,14 +38,14 @@ export const NicotineFilter = () => {
                 <div className="nicotine-checkbox-list">
                     <CheckboxGroup style={{ flex: '0 1 auto' }}
                         options={plainOptions}
-                        value={checkedList}
+                        value={defaultCheckedList}
                         onChange={onChange}
                     />
                 </div>
                 <Checkbox
-                    indeterminate={indeterminate} //false
+                    indeterminate={indeterminate}
                     onChange={onCheckAllChange}
-                    checked={checkAll} // true , только тогда будет галочка
+                    checked={checkAll}
                     style={{ paddingTop: "0.7rem" }}>
 
                     <span>Выбрать всё</span>

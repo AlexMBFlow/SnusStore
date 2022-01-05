@@ -1,4 +1,4 @@
-import { CHANGE_CHECKED_LIST } from "../utils/actionTypes"
+import { CHANGE_CHECKED_LIST } from "../utils/actionTypes";
 
 export const checkedListAC = (list) => {
     return {
