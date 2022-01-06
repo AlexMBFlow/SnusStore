@@ -15,7 +15,7 @@ export const snusStore = {
             packs: 20,
             nicotine: 70,
             saturation: "Очень крепкий",
-            price: 420,
+            price: 620,
             avatar: 'https://snus-upi.ru/assets/images/products/641/small/66.jpg'
         },
         {
