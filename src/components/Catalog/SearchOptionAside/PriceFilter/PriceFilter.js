@@ -34,7 +34,6 @@ export const PriceFilter = () => {
 
     let handleChangeSlider = value => {
         dispatch(priceSliderAC(value))
-        console.log(value)
     }
 
     handleChangeSlider = handleChangeSliderDebounce(handleChangeSlider, 500)
