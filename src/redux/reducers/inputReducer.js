@@ -1,4 +1,4 @@
-import {SEARCH_SNUS_INPUT} from "../utils/actionTypes"
+import { SEARCH_SNUS_INPUT } from "../utils/actionTypes"
 
 const initialState = {
     value: undefined

@@ -1,4 +1,4 @@
-import {createStore, combineReducers } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { snusReducer } from "./reducers/snusReducer";
 import { inputReducer } from "../redux/reducers/inputReducer";

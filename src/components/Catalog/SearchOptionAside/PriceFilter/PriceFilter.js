@@ -7,8 +7,6 @@ import { priceSliderAC } from "../../../../redux/actionCreators/priceSliderAC";
 import { setSortPriceAC } from "../../../../redux/actionCreators/setSortPriceAC";
 import './PriceFilter.css';
 
-
-
 export const PriceFilter = () => {
     const dispatch = useDispatch()
 

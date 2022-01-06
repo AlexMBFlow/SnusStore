@@ -6,7 +6,6 @@ import { SearchOptionAside } from './SearchOptionAside/SearchOptionAside';
 import "./Catalog.css";
 
 export const Catalog = () => {
-
     return (
         <>
             <Row className='catalog-wrapper'>
