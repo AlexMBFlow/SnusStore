@@ -34,7 +34,7 @@ export const PriceFilter = () => {
         dispatch(priceSliderAC(value))
     }
 
-    handleChangeSlider = handleChangeSliderDebounce(handleChangeSlider, 500)
+    handleChangeSlider = handleChangeSliderDebounce(handleChangeSlider, 370)
 
     const { Option, OptGroup } = Select;
 

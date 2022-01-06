@@ -2,8 +2,8 @@ import { SET_SELECTED_PRICE_SLIDER } from "../utils/actionTypes";
 import { SET_SORT_PRICE_SELECT } from "../utils/actionTypes";
 
 const initialState = {
-    defaultPrice: [100, 650],
-    selectedPrice: [100, 650],
+    defaultPrice: [400, 500],
+    selectedPrice: [400, 500],
     min: 100,
     max: 650,
     sort: null
