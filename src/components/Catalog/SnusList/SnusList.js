@@ -10,8 +10,8 @@ export const SnusList = () => {
     const { snusItems } = useSelector(state => state.snusReducer);
     const { value } = useSelector(state => state.inputReducer);
     const { defaultCheckedList } = useSelector(state => state.nicotineReducer); //selectedPrice
-    const { selectedPrice } = useSelector(state => state.priceReducer);
-    const { defaultPrice } = useSelector(state => state.priceReducer);
+    //const { selectedPrice } = useSelector(state => state.priceReducer);
+    //const { defaultPrice } = useSelector(state => state.priceReducer);
     /* 
     Из стора приходит весь снюсик {snusItems}, и значение из инпута {value},
     на каждый ончейндж инпута используется редусер и изменяется стейт редюсера

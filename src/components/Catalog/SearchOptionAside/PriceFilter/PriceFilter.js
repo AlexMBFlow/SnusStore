@@ -21,9 +21,23 @@ export const PriceFilter = () => {
         dispatch(setSortPriceAC(sort))
     }
 
-    const handleChangeSlider = value => {
-        dispatch(priceSliderAC(value))
+    const handleChangeSliderDebounce = (callback, ms) => {
+        let timeout;
+        return function() {
+            const fnCall = () => callback.apply(this, arguments)
+
+            clearTimeout(timeout)
+
+            timeout = setTimeout(fnCall, ms)
+        }
     }
+
+    let handleChangeSlider = value => {
+        dispatch(priceSliderAC(value))
+        console.log(value)
+    }
+
+    handleChangeSlider = handleChangeSliderDebounce(handleChangeSlider, 500)
 
     const { Option, OptGroup } = Select;
 
