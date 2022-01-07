@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Modal } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons';
+import { showBasketAC } from "../../../redux/actionCreators/showBasketAC";
+import { useDispatch, useSelector } from 'react-redux';
+import "./Basket.css";
+
 
 export const Basket = () => {
-    const [isModalVisible, setIsModalVisible] = useState(false);
+    const dispatch = useDispatch()
+
+    const {isModalVisible} = useSelector( state => state.showBasket )
+
+
 
     const showModal = () => {
-        setIsModalVisible(true);
+        dispatch(showBasketAC(true));
     };
 
     const handleOk = () => {
-        setIsModalVisible(false);
+        dispatch(showBasketAC(false));
     };
 
     const handleCancel = () => {
-        setIsModalVisible(false);
+        dispatch(showBasketAC(false));
     };
 
     return (

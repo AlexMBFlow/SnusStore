@@ -2,11 +2,15 @@
     position: fixed;
     right: 20px;
     top: 50%;
-    width: 1.9rem;
-    height: 1.9rem;
+    width: 1.75rem;
+    height: 1.75rem;
 }
 
 .catalog-wrapper svg[data-icon="shopping-cart"] {
     width: 1.7rem;
     height: 1.7rem;
+}
+
+.catalog-basket {
+    cursor: pointer;
 }
