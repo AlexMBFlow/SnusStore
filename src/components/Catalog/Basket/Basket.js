@@ -9,7 +9,7 @@ import "./Basket.css";
 export const Basket = () => {
     const dispatch = useDispatch()
 
-    const {isModalVisible} = useSelector( state => state.showBasket )
+    const {isModalVisible} = useSelector(state => state.showBasket)
 
 
 
