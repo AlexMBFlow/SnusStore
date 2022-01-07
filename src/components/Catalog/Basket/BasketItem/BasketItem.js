@@ -5,7 +5,7 @@ import "./BasketItem.css";
 
 export const BasketItem = ({ snusBasket }) => {
 
-    return (  
+    return (
         <div className='basketItem'>
             <div className="basketItem-inner">
                 <div className="basketItem-avatar" style={{ backgroundImage: "url(https://snus-upi.ru/assets/images/products/641/small/66.jpg)" }}></div>

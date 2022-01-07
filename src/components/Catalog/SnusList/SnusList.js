@@ -1,8 +1,8 @@
 import React from 'react';
-import { SnusItem } from './SnusItem/SnusItem';
 import { v4 as uuidv4 } from 'uuid';
-import './SnusList.css';
 import { useSelector } from 'react-redux';
+import { SnusItem } from './SnusItem/SnusItem';
+import './SnusList.css';
 
 export const SnusList = () => {
     const { snusItems } = useSelector(state => state.snusReducer);
@@ -31,12 +31,12 @@ export const SnusList = () => {
         })
     })
 
-    const filteredSortFunction = (array) => { 
+    const filteredSortFunction = (array) => {
         const result = array.sort((a, b) => {
             if (!!array && sort === "mostPrice") {
 
                 return b.price - a.price
-                
+
             } else if (!!array && sort === "smallestPrice") {
 
                 return a.price - b.price

@@ -2,18 +2,18 @@ import React from 'react';
 import { Button, message } from 'antd';
 import './SnusItem.css';
 
-export const SnusItem = ({snusProps}) => {
-    const {id} = snusProps
+export const SnusItem = ({ snusProps }) => {
+    const { id } = snusProps
     const success = () => {
         console.log(id)
         message.success('Добавлено в корзину', 0.85);
-      };
-      //console.log("PROPS", snusInfo)
+    };
+    //console.log("PROPS", snusInfo)
     return (
         <div className='snus-item'>
             <div className='snus-item-inner'>
                 <img className='snus-avatar-img'
-                    style={{width:250}}
+                    style={{ width: 250 }}
                     src={snusProps.avatar}
                     alt={snusProps.name}
                     draggable={false}
