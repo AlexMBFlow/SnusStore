@@ -1,8 +1,10 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { SnusList } from './SnusList/SnusList';
-import { SearchOptionTop}  from './SearchOptionTop/SearchOptionTop';
+import { SearchOptionTop } from './SearchOptionTop/SearchOptionTop';
 import { SearchOptionAside } from './SearchOptionAside/SearchOptionAside';
+
+import { Basket } from "./Basket/Basket"
 import "./Catalog.css";
 
 export const Catalog = () => {
@@ -10,13 +12,19 @@ export const Catalog = () => {
         <>
             <Row className='catalog-wrapper'>
                 <Col span={18} push={5}>
-                    <SearchOptionTop/>
-                    <SnusList/>
+                    <SearchOptionTop />
+                    <SnusList />
+
                 </Col>
 
                 <Col span={5} pull={18}>
-                    <SearchOptionAside/>
+                    <SearchOptionAside />
+
                 </Col>
+
+                <div className="catalog-basket">
+                    <Basket />
+                </div>
             </Row>
         </>
     )

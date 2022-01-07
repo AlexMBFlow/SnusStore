@@ -41,6 +41,8 @@ export const SnusList = () => {
 
                 return a.price - b.price
 
+            } else {
+                return array
             }
         })
         return result
