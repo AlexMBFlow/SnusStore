@@ -1,4 +1,4 @@
-import { SET_SHOW_BASKET } from "../utils/actionTypes"
+import { SET_SHOW_BASKET } from "../utils/actionTypes";
 
 const initialState = {
     isModalVisible: false

@@ -1,9 +1,11 @@
 import React from 'react';
-import './SnusItem.css';
 import { Button, message } from 'antd';
+import './SnusItem.css';
 
 export const SnusItem = ({snusProps}) => {
+    const {id} = snusProps
     const success = () => {
+        console.log(id)
         message.success('Добавлено в корзину', 0.85);
       };
       //console.log("PROPS", snusInfo)
@@ -22,7 +24,7 @@ export const SnusItem = ({snusProps}) => {
                     <div className="snus-item__packs description-center">
                         <span className='gray'>Пакетиков: </span>{snusProps.packs} шт</div>
                     <div className="snus-item__packs description-center">
-                        <span className='gray'>Никотин:</span> {snusProps.nicotine}мг
+                        <span className='gray'>Никотин: </span>{snusProps.nicotine} мг
                     </div>
                 </div>
                 <div className="snus-item__price">{snusProps.price} ₽</div>

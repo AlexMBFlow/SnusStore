@@ -5,13 +5,10 @@ import { showBasketAC } from "../../../redux/actionCreators/showBasketAC";
 import { useDispatch, useSelector } from 'react-redux';
 import "./Basket.css";
 
-
 export const Basket = () => {
     const dispatch = useDispatch()
 
     const {isModalVisible} = useSelector(state => state.showBasket)
-
-
 
     const showModal = () => {
         dispatch(showBasketAC(true));
@@ -31,7 +28,7 @@ export const Basket = () => {
                 <ShoppingCartOutlined />
             </div>
 
-            <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+            <Modal title="Корзина" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
                 <p>Some contents...</p>
                 <p>Some contents...</p>
                 <p>Some contents...</p>
