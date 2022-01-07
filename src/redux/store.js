@@ -4,7 +4,7 @@ import { snusReducer } from "./reducers/snusReducer";
 import { inputReducer } from "../redux/reducers/inputReducer";
 import { nicotineReducer } from "../redux/reducers/nicotineReducer";
 import { priceReducer } from "../redux/reducers/priceReducer";
-import { showBasket }from "../redux/reducers/showBasket"
+import { showBasket }from "../redux/reducers/showBasket";
 
 const rootReduser = combineReducers({
     snusReducer,
