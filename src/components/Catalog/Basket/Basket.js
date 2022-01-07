@@ -3,7 +3,7 @@ import { Modal } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { showBasketAC } from "../../../redux/actionCreators/showBasketAC";
 import { useDispatch, useSelector } from 'react-redux';
-import { BasketItem } from "./BasketItem/BasketItem"
+import { BasketItem } from "./BasketItem/BasketItem";
 import "./Basket.css";
 
 export const Basket = () => {

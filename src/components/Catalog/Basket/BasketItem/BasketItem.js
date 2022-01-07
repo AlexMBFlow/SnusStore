@@ -1,5 +1,5 @@
 import React from 'react';
-import "./BasketItem.css"
+import "./BasketItem.css";
 //import { useSelector } from 'react-redux';
 
 
