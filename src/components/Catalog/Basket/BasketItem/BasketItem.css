@@ -1,0 +1,33 @@
+.basketItem-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basketItem {
+    margin-top: 1.25rem;
+}
+
+.basketItem-avatar {
+    min-width: 3.5rem;
+    min-height: 3.5rem;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.basketItem-name {
+    min-width: 4.125rem;
+    text-align: center;
+}
+
+.basketItem-taste {
+    min-width: 4.125rem;
+    text-align: center;
+}
+
+.basketItem-price {
+    min-width: 4.125rem;
+    text-align: center;
+}

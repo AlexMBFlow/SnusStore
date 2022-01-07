@@ -1,0 +1,29 @@
+.basketItem-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basketItem-avatar-info {
+    font-weight: bold;
+    min-width: 3.5rem;
+    text-align: center;
+}
+
+.basketItem-name-info {
+    font-weight: bold;
+    min-width: 4.125rem;
+    text-align: center;
+}
+
+.basketItem-taste-info {
+    font-weight: bold;
+    min-width: 4.125rem;
+    text-align: center;
+}
+
+.basketItem-price-info {
+    font-weight: bold;
+    min-width: 4.125rem;
+    text-align: center;
+}

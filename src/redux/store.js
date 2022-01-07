@@ -5,13 +5,15 @@ import { inputReducer } from "../redux/reducers/inputReducer";
 import { nicotineReducer } from "../redux/reducers/nicotineReducer";
 import { priceReducer } from "../redux/reducers/priceReducer";
 import { showBasket }from "../redux/reducers/showBasket";
+import { basketReducer }from "../redux/reducers/basketReducer";
 
 const rootReduser = combineReducers({
     snusReducer,
     inputReducer,
     nicotineReducer,
     priceReducer,
-    showBasket
+    showBasket,
+    basketReducer
 })
 
 export const store = createStore(rootReduser, composeWithDevTools())
