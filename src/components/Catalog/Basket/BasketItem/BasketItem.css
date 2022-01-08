@@ -1,14 +1,15 @@
-.basketItem-inner {
+.basket-item-inner {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
 }
 
-.basketItem {
+.basket-item {
     margin-top: 1.25rem;
 }
 
-.basketItem-avatar {
+.basket-item-avatar {
     min-width: 3.5rem;
     min-height: 3.5rem;
     border-radius: 50%;
@@ -17,17 +18,28 @@
     background-repeat: no-repeat;
 }
 
-.basketItem-name {
-    min-width: 4.125rem;
+.basket-item-name {
+    min-width: 4.5rem;
     text-align: center;
 }
 
-.basketItem-taste {
-    min-width: 4.125rem;
+.basket-item-taste {
+    min-width: 4.5rem;
     text-align: center;
 }
 
-.basketItem-price {
-    min-width: 4.125rem;
+.basket-item-price {
+    min-width: 4.5rem;
     text-align: center;
+}
+.basket-item-remove {
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 36%;
+    right: -0.5rem;
+    cursor: pointer;
 }

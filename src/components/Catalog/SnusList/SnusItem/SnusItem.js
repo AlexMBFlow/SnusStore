@@ -1,14 +1,17 @@
 import React from 'react';
 import { Button, message } from 'antd';
+import { useDispatch } from 'react-redux';
+import { basketAddAC } from "../../../../redux/actionCreators/basketAC";
 import './SnusItem.css';
 
 export const SnusItem = ({ snusProps }) => {
-    const { id } = snusProps
+    const dispatch = useDispatch()
     const success = () => {
-        console.log(id)
+
+        dispatch(basketAddAC(snusProps))
         message.success('Добавлено в корзину', 0.85);
     };
-    //console.log("PROPS", snusInfo)
+
     return (
         <div className='snus-item'>
             <div className='snus-item-inner'>

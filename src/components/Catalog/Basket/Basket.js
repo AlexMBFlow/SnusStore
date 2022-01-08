@@ -55,9 +55,11 @@ export const Basket = () => {
                     <div className="basketItem-taste-info">Вкус:</div>
                     <div className="basketItem-price-info">Цена:</div>
                 </div>
-                {snusBasket.map(snusBasket => (
-                    <BasketItem snusBasket={snusBasket} key={uuidv4()} />
-                ))}
+                {snusBasket.length === 0 ? <div className="basket-empty">Корзина пуста &#128546;</div>
+                    : snusBasket.map(snusBasket => (
+                        <BasketItem snusBasket={snusBasket} key={uuidv4()} />
+                    ))
+                }
             </Modal>
         </div>
     )
