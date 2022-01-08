@@ -33,7 +33,7 @@ export const Basket = () => {
     const handleCancel = () => {
         dispatch(showBasketAC(false));
     };
-    //{snusBasket.reduce((acc, el) => acc.price + el.price)}
+
     return (
         <div className="catalog-basket">
             <div className="basket-ico" onClick={showModal}>
