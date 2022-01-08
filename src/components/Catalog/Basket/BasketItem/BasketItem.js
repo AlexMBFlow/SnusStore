@@ -1,13 +1,15 @@
 import React from 'react';
 import { CloseOutlined } from '@ant-design/icons';
+import { message } from 'antd';
 import { useDispatch } from 'react-redux';
 import { basketRemoveAC } from "../../../../redux/actionCreators/basketAC"
 import "./BasketItem.css";
 
 export const BasketItem = ({ snusBasket }) => {
     const dispatch = useDispatch()
-    //const { id } = snusBasket
+    
     const removeItem = () => {
+        message.error('Удалено из корзины', 0.85)
         dispatch(basketRemoveAC(snusBasket))
     }
 

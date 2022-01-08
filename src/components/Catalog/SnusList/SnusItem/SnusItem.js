@@ -11,7 +11,7 @@ export const SnusItem = ({ snusProps }) => {
     const success = () => {
         //чтобы у итемов, которые лежат в корзине, были разные id, иначе
         //если добавить 2 одинаковых корвуса, и нажать удалить один,
-        // удалятся все корвусы, потому что у них одинавые id, ведь проверка идет по id
+        //удалятся все корвусы, потому что у них одинавые id, ведь проверка идет по id
         const snusPropsWithNewId = {...snusProps, id: uuidv4()} 
         dispatch(basketAddAC(snusPropsWithNewId))
         message.success('Добавлено в корзину', 0.85);
