@@ -18,12 +18,16 @@
     background-repeat: no-repeat;
 }
 
-.basket-item-name {
+.basket-item-title {
     min-width: 4.5rem;
     text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 .basket-item-taste {
+    font-weight: bolder;
+    color: #5E6772;
     min-width: 4.5rem;
     text-align: center;
 }
@@ -31,6 +35,8 @@
 .basket-item-price {
     min-width: 4.5rem;
     text-align: center;
+    font-size: 0.9rem;
+    font-weight: bolder;
 }
 .basket-item-remove {
     width: 1rem;

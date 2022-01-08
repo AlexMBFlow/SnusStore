@@ -20,10 +20,7 @@ export const Catalog = () => {
                     <SearchOptionAside />
 
                 </Col>
-
-
                     <Basket />
-
             </Row>
         </>
     )

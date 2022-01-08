@@ -9,10 +9,10 @@ export const basketAddAC = (item) => {
     }
 }
 
-export const basketRemoveAC = (id) => {
+export const basketRemoveAC = (item) => {
     return {
         type: REMOVE_SNUS_ON_BASKET,
-        id: id
+        item: item
     }
 }
 

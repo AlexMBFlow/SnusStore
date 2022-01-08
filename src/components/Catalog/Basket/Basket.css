@@ -14,32 +14,49 @@
     margin: 1rem auto
 }
 
-.basketItem-info {
+.basket-item-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.basketItem-avatar-info {
+.basket-item-avatar-info {
     font-weight: bold;
     min-width: 3.5rem;
     text-align: center;
 }
 
-.basketItem-name-info {
+.basket-item-name-info {
     font-weight: bold;
     min-width: 4.5rem;
     text-align: center;
 }
 
-.basketItem-taste-info {
+.basket-item-taste-info {
     font-weight: bold;
     min-width: 4.5rem;
     text-align: center;
 }
 
-.basketItem-price-info {
+.basket-item-price-info {
     font-weight: bold;
     min-width: 4.5rem;
+    text-align: center;
+}
+
+.basket-total-price {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    font-size: 0.9rem;
+    font-weight: bolder;
+}
+
+.basket-total-price-inner {
+    text-align: center;
+    min-width: 4.5rem;
+}
+
+.basket-total-price-number {
     text-align: center;
 }

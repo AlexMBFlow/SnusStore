@@ -8,10 +8,11 @@ import { v4 as uuidv4 } from 'uuid';
 import "./Basket.css";
 
 export const Basket = () => {
-    const [onHover, setOnHover] = useState(false)
-    const { snusBasket } = useSelector(state => state.basketReducer)
     const dispatch = useDispatch()
     const { isModalVisible } = useSelector(state => state.showBasket)
+    const { snusBasket } = useSelector(state => state.basketReducer)
+    const { totalPrice } = useSelector(state => state.basketReducer)
+    const [onHover, setOnHover] = useState(false)
 
     const handleOnMouseEnter = () => {
         setOnHover(true)
@@ -32,7 +33,7 @@ export const Basket = () => {
     const handleCancel = () => {
         dispatch(showBasketAC(false));
     };
-
+    //{snusBasket.reduce((acc, el) => acc.price + el.price)}
     return (
         <div className="catalog-basket">
             <div className="basket-ico" onClick={showModal}>
@@ -52,11 +53,11 @@ export const Basket = () => {
 
                 {snusBasket.length === 0 ? ""
                     :
-                    <div className="basketItem-info">
-                        <div className="basketItem-avatar-info">Фото:</div>
-                        <div className="basketItem-name-info">Название:</div>
-                        <div className="basketItem-taste-info">Вкус:</div>
-                        <div className="basketItem-price-info">Цена:</div>
+                    <div className="basket-item-info">
+                        <div className="basket-item-avatar-info">Фото:</div>
+                        <div className="basket-item-name-info">Название:</div>
+                        <div className="basket-item-taste-info">Вкус:</div>
+                        <div className="basket-item-price-info">Цена:</div>
                     </div>
 
                 }
@@ -66,6 +67,15 @@ export const Basket = () => {
                         <BasketItem snusBasket={snusBasket} key={uuidv4()} />
                     ))
                 }
+                {snusBasket.length === 0 ?
+                    ""
+                    :<div className="basket-total-price">
+                        <div className="basket-total-price-inner">
+                            {totalPrice} ₽
+                        </div>
+                        <div className="basket-total-price-number">Итого:
+                        </div>
+                    </div>}
             </Modal>
         </div>
     )
