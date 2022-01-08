@@ -63,13 +63,15 @@ export const Basket = () => {
                 }
                 {snusBasket.length === 0 ?
                     <div className="basket-empty">Корзина пуста &#128546;</div>
-                    : snusBasket.map(snusBasket => (
+                    :
+                    snusBasket.map(snusBasket => (
                         <BasketItem snusBasket={snusBasket} key={uuidv4()} />
                     ))
                 }
                 {snusBasket.length === 0 ?
                     ""
-                    :<div className="basket-total-price">
+                    :
+                    <div className="basket-total-price">
                         <div className="basket-total-price-inner">
                             {totalPrice} ₽
                         </div>
