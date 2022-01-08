@@ -54,7 +54,7 @@ export const Basket = () => {
                 {snusBasket.length === 0 ? ""
                     :
                     <div className="basket-item-info">
-                        <div className="basket-item-avatar-info">Фото:</div>
+                        <div className="basket-item-avatar-info">Вид:</div>
                         <div className="basket-item-name-info">Название:</div>
                         <div className="basket-item-taste-info">Вкус:</div>
                         <div className="basket-item-price-info">Цена:</div>
