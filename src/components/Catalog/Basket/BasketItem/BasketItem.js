@@ -19,7 +19,7 @@ export const BasketItem = ({ snusBasket }) => {
                 <div className="basket-item-name">{snusBasket.name}</div>
                 <div className="basket-item-taste">{snusBasket.taste}</div>
                 <div className="basket-item-price">{snusBasket.price}₽</div>
-                <div onClick={removeItem} className='basket-item-remove'><CloseOutlined/></div>
+                <div onClick={removeItem} className='basket-item-remove'><CloseOutlined style={{color: "red"}}/></div>
             </div>
         </div>
     )

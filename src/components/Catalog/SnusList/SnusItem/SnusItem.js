@@ -1,14 +1,19 @@
 import React from 'react';
 import { Button, message } from 'antd';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { basketAddAC } from "../../../../redux/actionCreators/basketAC";
 import './SnusItem.css';
 
 export const SnusItem = ({ snusProps }) => {
     const dispatch = useDispatch()
-    const success = () => {
 
-        dispatch(basketAddAC(snusProps))
+    const success = () => {
+        //чтобы у итемов, которые лежат в корзине, были разные id, иначе
+        //если добавить 2 одинаковых корвуса, и нажать удалить один,
+        // удалятся все корвусы, потому что у них одинавые id, ведь проверка идет по id
+        const snusPropsWithNewId = {...snusProps, id: uuidv4()} 
+        dispatch(basketAddAC(snusPropsWithNewId))
         message.success('Добавлено в корзину', 0.85);
     };
 
