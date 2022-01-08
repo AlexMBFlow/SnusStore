@@ -49,13 +49,19 @@ export const Basket = () => {
             </div>
 
             <Modal okText={"Оформить заказ"} cancelText="Закрыть корзину" title="Корзина" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                <div className="basketItem-info">
-                    <div className="basketItem-avatar-info">Фото:</div>
-                    <div className="basketItem-name-info">Название:</div>
-                    <div className="basketItem-taste-info">Вкус:</div>
-                    <div className="basketItem-price-info">Цена:</div>
-                </div>
-                {snusBasket.length === 0 ? <div className="basket-empty">Корзина пуста &#128546;</div>
+
+                {snusBasket.length === 0 ? ""
+                    :
+                    <div className="basketItem-info">
+                        <div className="basketItem-avatar-info">Фото:</div>
+                        <div className="basketItem-name-info">Название:</div>
+                        <div className="basketItem-taste-info">Вкус:</div>
+                        <div className="basketItem-price-info">Цена:</div>
+                    </div>
+
+                }
+                {snusBasket.length === 0 ?
+                    <div className="basket-empty">Корзина пуста &#128546;</div>
                     : snusBasket.map(snusBasket => (
                         <BasketItem snusBasket={snusBasket} key={uuidv4()} />
                     ))
