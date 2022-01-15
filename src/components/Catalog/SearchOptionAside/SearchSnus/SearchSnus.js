@@ -16,13 +16,12 @@ export const SearchSnus = () => {
         dispatch(inputAC(e))
     }
     //заполняем строку автокомплита нужными названиями снюсов
-    let duplicateArr = [];
+    let snusItemName = [];
 
-    snusItems.forEach( el => duplicateArr.push(el.name))
+    snusItems.forEach( el => snusItemName.push(el.name))
 
-    if (options.length < 1) {
-        let soloItems = new Set(duplicateArr)
-        soloItems.forEach( value => {
+    if (!options.length) {
+        [...new Set(snusItemName)].forEach( value => {
             options.push({value: value, key: uuidv4()})
         })
     }

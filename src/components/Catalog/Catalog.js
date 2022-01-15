@@ -13,12 +13,10 @@ export const Catalog = () => {
                 <Col span={18} push={5}>
                     <SearchOptionTop />
                     <SnusList />
-
                 </Col>
 
                 <Col span={5} pull={18}>
                     <SearchOptionAside />
-
                 </Col>
                     <Basket />
             </Row>
