@@ -5,7 +5,7 @@ import { SearchSnus } from './SearchSnus/SearchSnus';
 import './SearchOptionAside.css';
 
 
-export const SearchOptionAside = ({snusItems, value}) => {
+export const SearchOptionAside = () => {
     return (
         <div className='search-options-aside'>
             <SearchSnus/>
